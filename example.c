@@ -122,10 +122,6 @@ int main(int argc, char *argv[])
 
     printf("Bytes read: %ld, Buffer Write: %ld\n", bufferReadSize, bufferWriteSize);
 
-    /* free the memory we used for the buffer */
-    free(bufferWrite);
-    free(bufferRead);
-
     /* open a file for writing */
     fWrite = fopen(argv[3], "wb");
 
@@ -139,6 +135,10 @@ int main(int argc, char *argv[])
     /* copy all the buffer into the file */
     fwrite (bufferWrite , sizeof(char), bufferWriteSize, fWrite);
     fclose (fWrite);
+
+    /* free the memory we used for the buffer */
+    free(bufferWrite);
+    free(bufferRead);
 
     return 0;
 }
