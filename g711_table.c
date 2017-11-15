@@ -1,7 +1,6 @@
 #ifndef G711_TABLE_H
 #define G711_TABLE_H
 
-#include <stdio.h>
 #include "g711.h"
 
 /* 16384 entries per table (16 bit) */
