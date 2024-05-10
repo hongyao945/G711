@@ -34,3 +34,7 @@ def wav_to_pcm(wav_filename, pcm_filename):
         print(f"转换完成，PCM文件已保存到：{pcm_filename}")
     except IOError as e:
         print(f"文件操作错误：{e}")
+
+if __name__ == '__main__':
+    # 使用函数，指定源WAV文件和目标PCM文件的路径
+    wav_to_pcm(f'ffmpeg_8000_16{pure_name}.wav', f'ffmpeg_8000_16{pure_name}.pcm')
